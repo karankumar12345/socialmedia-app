@@ -40,8 +40,8 @@ const { isAuthenticated }= useSelector((state)=>state.user)
         }
     
         <Routes>
-          <Route path="/" element={<Found/>} />
-        <Route path="/home" element={isAuthenticated ? <Home /> : <Login/>} />
+        
+        <Route path="/" element={isAuthenticated ? <Home /> : <Login/>} />
         <Route path="/profile" element={isAuthenticated ? <Account /> : <Login />} />
           <Route path="/login"element={isAuthenticated ? <Home /> : <Login />} />
           <Route path="/newpost" element={isAuthenticated ? <Newpost /> : <Login />} />

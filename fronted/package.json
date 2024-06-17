@@ -44,7 +44,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://socialmedia-app-zyn0.onrender.com",
+"proxy": "http://localhost:8000",
+
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
