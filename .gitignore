@@ -1,6 +1,8 @@
 
 
 /fronted/node_modules
+
+/fronted/.env
 /fronted/.env
 /SocialMediaB/config/config.env
 /SocialMediaB/node_modules
