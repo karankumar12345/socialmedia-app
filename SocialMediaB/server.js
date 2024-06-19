@@ -20,7 +20,10 @@ cloudinary.config({
 });
 
 app.use(express.json({ limit: '50mb' }));
-app.use(cors());
+app.use(cors({
+    origin:process.env.FRONTEND_ORIGIN, // Replace with your frontend domain
+    credentials: true // Allow credentials (cookies, authentication headers, etc.)
+}));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
