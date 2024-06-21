@@ -39,6 +39,8 @@ const register = async (req, res) => {
     const options = {
       expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
       httpOnly: true,
+      sameSite: "None",
+      secure: true
     };
 
     res.status(201).cookie("token", token, options).json({
@@ -75,8 +77,14 @@ const login = async (req, res) => {
       });
     }
 
-    const token = await user.generateToken();
-    res.status(200).cookie("token", token, { httpOnly: true }).json({
+    const options = {
+      expires: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+      httpOnly: true,
+      sameSite: "None",
+      secure: true
+    };
+
+    res.status(201).cookie("token", token, options).json({
       success: true,
       user,
       token,
@@ -136,13 +144,19 @@ const followerUser = async (req, res) => {
 };
 const logoutUser = async (req, res) => {
   try {
-    res
-      .status(200)
-      .cookie("token", null, { expires: new Date(Date.now()) })
-      .json({
-        success: true,
-        message: "Logged out",
-      });
+    const options = {
+      httOnly: true,
+      secure: true,
+      expires: new Date(Date.now()),
+      sameSite: "None",
+      secure: true
+    };
+  
+    res.status(200).cookie("token", "", options).json({
+      success: true,
+      message: "Logout Successfully"
+    })
+
   } catch (error) {
     res.status(500).json({
       success: false,
