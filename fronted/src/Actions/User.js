@@ -38,7 +38,7 @@ export const USERS_P_FAILURE = "users/UserPROFILEFailure";
 export const CLEAR_ERRORS = "ClearErrors";
 
 const api = axios.create({
-  baseURL: "https://socialmedia-app-2.onrender.com/",
+  baseURL: "https://socialmedia-app-3.onrender.com/",
   headers: {
     'Content-Type': 'application/json',
 

@@ -17,7 +17,7 @@ export const likeFailure = createAction('like/likeFailure');
 export const likeRequest = createAction('like/likeRequest');
 
 const api = axios.create({
-  baseURL: "https://socialmedia-app-2.onrender.com/",
+  baseURL: "https://socialmedia-app-3.onrender.com/",
   headers: {
     'Content-Type': 'application/json',
 
