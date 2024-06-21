@@ -56,7 +56,7 @@ export const clearError = createAction('clearErrors');
 export const clearMessage = createAction('clearMessage');
 
 const api = axios.create({
-  baseURL: "https://socialmedia-app-1.onrender.com/",
+  baseURL: "https://socialmedia-app-2.onrender.com/",
   headers: {
     'Content-Type': 'application/json',
 
